@@ -1,0 +1,20 @@
+group 'iton.jssi'
+version '1.0'
+
+description = 'Classes and utilities for ledger.'
+
+final REACTIVEX_VERSION = '2.2.11'
+final BITCOINJ_VERSION = '0.15.3'
+final FASTERXML_VERSION = '2.10.0'
+
+dependencies {
+    compile project(':crypto')
+    compile project(':anoncreds')
+    compile "org.bitcoinj:bitcoinj-core:$BITCOINJ_VERSION"
+    compile "com.fasterxml.jackson.core:jackson-databind:$FASTERXML_VERSION"
+    compile "io.reactivex.rxjava2:rxjava:$REACTIVEX_VERSION"
+
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.5.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-params:5.5.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.5.0'
+}
